@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style/style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones asincronas y promesas</title>
+  </head>
+  <body>
+    <p>
+      En javascript el modelo de ejecución de los programas en todo momento es
+      de manera sincronica,<br />
+      es decir que primero se termina la ejecución de una linea de código y
+      después comienza la siguiente linea de código<br /><br />
+      <script>
+        /*------sincronismo----------
+        console.log("Primera Ejecución");
+        console.log("Segunda ejecución");
+        alert("hola");
+        console.log("Bye");
+
+        Aqui lo que está ocurriendo es que como JS funciona de manera sincronica, hasta que no le de en "aceptar" a la alerta, el ultimo mensaje de la consola no se mostrará, ya que 
+        el alert sigue en ejecución.
+        */
+
+        //Ver main.js para asincronismo.
+      </script>
+    </p>
+    <p>
+      Funcion callback:<br />
+      Una función callback es una función que se pasa a otra función como
+      parametro. Por ejemplo:<br />
+      <br />
+      "function nombreDeLaFuncion(Callback){}"
+    </p>
+    <p>
+      Pila de llamadas:<br />
+      En JS una pila de llamadas es un mecanismo para que un interprete (como el
+      interprete en JS) realice un seguimiento de en que lugar de ejecucion está
+      cada función y que funciones son llamadas desde esa función.
+      <li>
+        Cuando un script llama a una función, el intérprete la añade a la pila
+        de llamadas y luego empieza a ejecutar la función.
+      </li>
+      <li>
+        Cualquier función o funciones que sean llamadas por esa función son
+        añadidas arriba de la pila de llamadas y serán ejecutadas cuando su
+        llamada sea alcanzada.
+      </li>
+      <li>
+        Cuando la función actual termina, el intérprete la elimina de la pila y
+        reanuda la ejecución donde se quedó. Si la pila necesita más espacio del
+        que se le asignó, se producirá un error de "desbordamiento de pila".
+      </li>
+      <!--Ejemplo en main.js linea 53+-->
+    </p>
+    <script src="javascript/main.js"></script>
+  </body>
+</html>

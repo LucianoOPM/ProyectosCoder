@@ -1,0 +1,30 @@
+#minecon{
+    position: relative;
+    left: 33%;
+    width: 700px;
+}
+form img{
+    position: relative;
+    left: 38%;
+    width: 150px;
+
+}
+input{
+    position: relative;
+    left: 640px;
+}
+button{
+    position: relative;
+    left: 420px;
+    top: 100px;    
+}
+.red{
+    background-color: red;
+    color: black;
+    width: 350px;
+}
+.green{
+    background-color: green;
+    color: black;
+    width: 350px;
+}
