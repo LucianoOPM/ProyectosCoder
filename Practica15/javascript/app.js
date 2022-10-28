@@ -1,9 +1,47 @@
 const btnTxt = document.querySelector("#btnTxt")
 const btnJSON = document.querySelector("#btnJSON")
 const btnArr = document.querySelector("#btnArr")
+const btnAPI = document.querySelector("#btnAPI")
+const btnPOST = document.querySelector("#btnPOST")
 
+const enviarPOST=()=>{
+    fetch('https://jsonplaceholder.typicode.com/posts',{
+        method:'POST',//Cuando se quieren enviar mensajes al servidor, se usan los metodos "POST", "PUT" y por "PATCH".Los más comunes son post y put que es para guardar datos en el servidor.
+        body: JSON.stringify({
+            titulo: 'CoderHouse',
+            mensaje: "mensaje de prueba",
+            userID: 5
+        }),
+        headers:{
+            'Content-type':'application/json; charset=utf-8'
+        }
+    })
+    .then((respuesta)=>{
+        console.log(respuesta)
+        return respuesta.json()
+    })
+    .then((apiPost)=>{
+        console.log(apiPost)
+    })
+}
 
-//continuar clase en 1:41:33
+const renderApi=({sprites})=>{
+    contenido.innerHTML+=`
+    <img src="${sprites.front_default}">
+    <img src="${sprites.front_shiny}">
+    `
+}
+
+const obtenerDatosAPI=(id)=>{
+    fetch(`https://pokeapi.co/api/v2/pokemon/${197}/`)
+    .then((respuesta)=>{
+        return respuesta.json()
+    })
+    .then((data)=>{
+        renderApi(data)
+    })
+    .catch((error)=>{console.log(error)})
+}
 
 const renderArr=(formas)=>{
     const contenido = document.querySelector("#contenido")
@@ -74,3 +112,5 @@ const obtenerDatosTxt=()=>{
 btnTxt.addEventListener("click", obtenerDatosTxt)
 btnJSON.addEventListener("click", obtenerDatosJSON)
 btnArr.addEventListener("click", obtenerDatosArr)
+btnAPI.addEventListener("click", obtenerDatosAPI)
+btnPOST.addEventListener("click", enviarPOST)
