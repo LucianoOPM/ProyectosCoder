@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
+    <pre style="font-family: arial">
+      <strong>Ajax:</strong>
+      ajax (por sus siglas en ingles async javascript and XML) no es una tecnología por si misma, es un término que describe un modo de utilizar conjuntamente varías tecnologías existentes.
+      Cuando estas tecnologías se combinan en un modelo AJAX, es posible lograr aplicaciones web capaces de actualizarse continuamente sin tener que volver a cargar la página completa.
+      Poder envíar una peticion al servidor y recibir una respuesta sin necesidad de recargar la página.
+
+
+      <strong>Fetch:</strong>
+      JS nos ofrece el método fetch() para hacer peticiones HTTP a algún servicio externo. Como estas peticiones son asincronas, convenientemente el método fetch() trabaja con promesas.
+      <strong>El ENDPOINT es la URL que se le pasa a fetch como parametro.</strong>
+      
+      Syntax:
+      <strong>fetch(url, config)</strong>
+
+      El método recibe un primer parametro que es la URL a la cual hace petición y un segundo parametro opcional de configuración.
+    </pre>
+
+    <div>
+      <p id="contenido"></p>
+      <button id="btnTxt">Leer Txt</button>
+      <button id="btnJSON">Leer JSON</button>
+      <button id="btnArr">Leer Array</button>
+    </div>
     <script src="javascript/app.js"></script>
   </body>
 </html>

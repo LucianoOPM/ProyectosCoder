@@ -1,0 +1,14 @@
+[
+    {
+        "figura": "triangulo",
+        "formula": "b*a/2"
+    },
+    {
+        "figura": "cuadrado",
+        "formula": "b*a"
+    },
+    {
+        "figura": "circulo",
+        "formula": "pi*r³"
+    }
+]
